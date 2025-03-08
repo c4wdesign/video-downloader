@@ -16,7 +16,7 @@ app.get("/download", (req, res) => {
   }
 
   exec(
-    `yt-dlp -J --no-check-certificate --extractor-args youtube:player_client=web "${videoUrl}"`,
+    `./yt-dlp -J --no-check-certificate --extractor-args youtube:player_client=web "${videoUrl}"`,
     (error, stdout, stderr) => {
       if (error) {
         console.error(`Error: ${stderr}`);
