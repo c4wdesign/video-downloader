@@ -64,7 +64,7 @@ app.get("/download", (req, res) => {
   );
 });
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 10000; // changed to 10000 to match render logs.
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
