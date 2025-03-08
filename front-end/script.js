@@ -21,7 +21,7 @@ document
 
     try {
       const response = await fetch(
-        `http://localhost:5000/download?url=${encodeURIComponent(videoUrl)}`
+        `https://video-downloader-backend-xt2o.onrender.com/download?url=${encodeURIComponent(videoUrl)}`
       );
       const data = await response.json();
       loader.style.display = "none";
