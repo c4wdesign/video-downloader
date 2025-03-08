@@ -1,0 +1,328 @@
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 500px;
+    background: white;
+    padding: 20px;
+    margin: 50px auto;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#najitech_logo{
+    width: 200px;
+    /* height: 100px; */
+
+    /* border-radius: 8px; */
+}
+
+h1 {
+    color: #000000;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.input-box {
+    display: flex;
+    justify-content: center; /* Center the input and button */
+    margin-top: 20px;
+    gap: 10px;
+    width: 350px; /* Set a specific width */
+    margin: 20px auto; /* Center horizontally */
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+button {
+    padding: 12px 15px;
+    border: none;
+    background: #12229d;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+button:hover {
+    background: #12229de1;
+}
+
+#result {
+    margin-top: 20px;
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: #e9ecef;
+    padding: 12px;
+    margin: 5px 0;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #12229d;
+    font-weight: bold;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+.loader {
+    display: none;
+    margin: 20px auto;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #12229d;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Custom Select Styles */
+#format-select-container {
+    width: 350px;
+    margin: 20px auto;
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    appearance: none; /* Remove default arrow */
+    -webkit-appearance: none;
+    background-color: #fff;
+    background-image: url("data:image/svg+xml,%3Csvg width='40px' height='40px' viewBox='-2.4 -2.4 28.80 28.80' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%2312229d' stroke-width='0.096'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round' stroke='%23CCCCCC' stroke-width='0.048'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cpath fill='%2312229d' fill-rule='evenodd' d='M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zm.707-5.293 3-3a1 1 0 0 0-1.414-1.414L13 12.586V9a1 1 0 1 0-2 0v3.586l-1.293-1.293a1 1 0 0 0-1.414 1.414l3 3a1 1 0 0 0 1.414 0z' clip-rule='evenodd'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+
+    /* background-image: url("data:image/svg+xml,%3Csvg width='40px' height='40px' viewBox='-2.4 -2.4 28.80 28.80' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%23007bff' stroke-width='0.096'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round' stroke='%23CCCCCC' stroke-width='0.048'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cpath fill='%23007bff' fill-rule='evenodd' d='M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zm.707-5.293 3-3a1 1 0 0 0-1.414-1.414L13 12.586V9a1 1 0 1 0-2 0v3.586l-1.293-1.293a1 1 0 0 0-1.414 1.414l3 3a1 1 0 0 0 1.414 0z' clip-rule='evenodd'%3E%3C/path%3E%3C/g%3E%3C/svg%3E"); */
+
+    /* background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path d="M2 0L0 2h4zm0 5L0 3h4z"/></svg>'); */
+    
+    background-repeat: no-repeat;
+    background-position: right 0px top 50%;
+    cursor: pointer;
+}
+
+
+#format-select-container:focus {
+    outline: none;
+    border-color: #12229d;
+}
+
+#select-btn {
+    position: relative;
+    height: 48px;
+    padding: 0 16px;
+    background-color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#options-checkbox-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+
+#selected-value {
+    flex: 1;
+}
+
+#chevrons i {
+    display: block;
+    height: 50%;
+    color: #999;
+    font-size: 12px;
+}
+
+#options-checkbox-btn:checked + #select-btn #chevrons i {
+    color: #333;
+}
+
+
+#options {
+    position: absolute;
+    top: 52px;
+    right: 0;
+    left: 0;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 4;
+    transition: margin-bottom 0.3s ease; /* Add transition */
+}
+
+
+#options-checkbox-btn:checked ~ #options {
+    border: 1px solid #ddd;
+    margin-bottom: 50px; /* Push down when open */
+    
+}
+
+
+.option {
+    position: relative;
+    line-height: 1;
+    transition: 0.3s ease all;
+    z-index: 2;
+    display: flex; /* Flexbox for checkbox and label */
+    align-items: center;
+    padding: 8px 16px; /* Adjust padding */
+}
+
+.option-label {
+    display: block; /* Always display */
+    color: #333;
+    font-size: 16px;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    margin-left: 8px; /* Space between checkbox and label */
+}
+
+.option-radio-btn {
+    appearance: none; /* Remove default checkbox appearance */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 4px; /* Square checkbox */
+    background-color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+
+.option-radio-btn:checked {
+    border-color: #12229d;
+}
+
+.option-radio-btn:checked::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background-color: #12229d;
+    border-radius: 2px; /* Inner square */
+}
+
+#option-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 30px;
+    transition: 0.3s ease all;
+    z-index: 1;
+    display: none;
+}
+
+#options-checkbox-btn:checked ~ #options #option-bg {
+    display: block;
+}
+
+.option:hover .option-label {
+    color: #fff;
+}
+
+/* Download Selected Button Styles */
+#download-selected {
+    display: block;
+    width: 350px;
+    margin: 20px auto;
+    padding: 14px 16px;
+    border: none;
+    background: #12229d;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 16px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
+}
+
+#download-selected:hover {
+    background: #12229de8;
+}
+
+/* Adjustments */
+#result h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#result ul {
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+#result ul li {
+    text-align: left;
+    padding: 12px 16px;
+    border-radius: 6px;
+    background-color: #f9f9;
+    margin-bottom: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Responsive Adjustments */
+@media (max-width: 400px) {
+    #format-select-container,
+    #download-selected {
+        width: 90%;
+    }
+}

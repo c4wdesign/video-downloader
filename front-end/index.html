@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Video Downloader</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <img id="najitech_logo" src="./img/najitech_video1.png" alt="najitech_logo">
+      
+      <h1> <strong style="color: #12229d;">NajiTech</strong> All Video Downloader</h1>
+      <p>Download videos from any platform using just a URL</p>
+
+      <div class="input-box">
+        <input
+          type="text"
+          id="video-url"
+          placeholder="Enter video URL here..."
+        />
+        <button id="download-btn">Get Formats</button>
+      </div>
+
+      <div class="loader" id="loader"></div>
+
+      <div id="result" class="hidden">
+        <h2>Available Downloads</h2>
+        <select id="format-select-container">
+          <option value="">Select a format</option>
+        </select>
+        <button id="download-selected" class="hidden">Download Selected</button>
+        <ul id="download-links"></ul>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
