@@ -22,7 +22,7 @@ app.get("/download", (req, res) => {
         console.error(`Error: ${stderr}`);
         return res
           .status(500)
-          .json({ success: false, message: "Failed to fetch video details" });
+          .json({ success: false, message: "Failed to fetch video details", error: stderr });
       }
 
       try {
@@ -58,13 +58,13 @@ app.get("/download", (req, res) => {
         console.error("Parsing Error:", parseError);
         res
           .status(500)
-          .json({ success: false, message: "Error processing video data" });
+          .json({ success: false, message: "Error processing video data", error: parseError.message });
       }
     }
   );
 });
 
-const PORT = process.env.PORT || 10000; // changed to 10000 to match render logs.
+const PORT = process.env.PORT || 10000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
